@@ -12,12 +12,12 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @EnableAsync
 public class AsyncConfig implements AsyncConfigurer {
 
-	@Bean(name = "priceExecutor")
+	@Bean(name = "numberExecutor")
 	public Executor pricingTaskExecutor() {
 		final ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
 		executor.setCorePoolSize(5);
 		executor.setMaxPoolSize(50);
-		executor.setThreadNamePrefix("PricingThread-");
+		executor.setThreadNamePrefix("vmthread-");
 		executor.initialize();
 		return executor;
 	}
