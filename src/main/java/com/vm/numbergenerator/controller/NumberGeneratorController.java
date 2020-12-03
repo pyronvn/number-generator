@@ -52,7 +52,7 @@ public class NumberGeneratorController {
 
 	@GetMapping(value = "/tasks/{id}")
 	public ResponseEntity<?> getSequence(@PathVariable("id") UUID id, @RequestParam String action) {
-		if (action == ActionConstants.GET_NUMLIST.getText()) {
+		if (action.equalsIgnoreCase(ActionConstants.GET_NUMLIST.getText())) {
 			return new ResponseEntity<>(numGeneratorService.getSequence(id), HttpStatus.OK);
 		}
 		else {

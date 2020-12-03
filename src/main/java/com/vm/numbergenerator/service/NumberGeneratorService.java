@@ -58,7 +58,7 @@ public class NumberGeneratorService {
 			Sequence save = repo.save(entity.get());
 
 			try {
-				Thread.sleep(20000);
+				Thread.sleep(30000);
 				save.setStatus(Status.SUCCESS.getText());
 				repo.save(save);
 			} catch (InterruptedException e) {
@@ -114,12 +114,7 @@ public class NumberGeneratorService {
 			val -= stepLength;
 		}
 
-//		List<List<Integer>> result = new ArrayList<>();
-
-//		result.add(resultList);
-
 		return resultList;
-
 	}
 
 	public UUID generateBulkNumber(List<NumGenerateRequestDTO> dto) {

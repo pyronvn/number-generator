@@ -1,7 +1,7 @@
 package com.vm.numbergenerator.constants;
 
 public enum ActionConstants {
-	GET_NUMLIST("get_numl;ist");
+	GET_NUMLIST("get_numlist");
 
 	private final String text;
 
